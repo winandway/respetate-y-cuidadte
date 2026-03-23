@@ -849,7 +849,7 @@
         ctx.fillText('QR Code', 100, 90);
         ctx.fillText('(se genera al desplegar)', 100, 115);
       };
-      img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(url);
+      img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent('https://respetate-y-cuidadte-kfb1.vercel.app/');
     }
     generateQR();
 
