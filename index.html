@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sexualidad Positiva - Informate, Respetate y Cuidate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      max-width: 480px;
+      min-height: 100vh;
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Header */
+    .header {
+      background: #ffffff;
+      padding: 28px 24px 12px;
+      position: relative;
+    }
+
+    .header h1 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      line-height: 1.1;
+      color: #4a4a8a;
+    }
+
+    .header h1 span {
+      display: block;
+      font-size: 34px;
+      color: #3b3b7a;
+    }
+
+    .header-line {
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #6b9fd4, #9b8ec4, #d4a76b);
+      border-radius: 2px;
+      margin-top: 10px;
+    }
+
+    /* Illustration Section */
+    .illustration-section {
+      position: relative;
+      background: linear-gradient(180deg, #e8f0f8 0%, #d4e4f4 100%);
+      padding: 20px 24px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icons-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .icon-item {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .illustration-people {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 0;
+      position: relative;
+    }
+
+    .person {
+      font-size: 120px;
+      line-height: 1;
+    }
+
+    .illustration-container {
+      text-align: center;
+    }
+
+    /* Wave + Slogan Section */
+    .wave-section {
+      position: relative;
+      background: linear-gradient(180deg, #d4e4f4 0%, #7b9cc7 15%, #6b7fbf 30%, #7a6daa 50%, #6a5b9a 70%, #5b8db8 100%);
+      padding: 60px 24px 30px;
+    }
+
+    .wave-top {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .wave-top svg {
+      width: 100%;
+      height: 60px;
+      display: block;
+    }
+
+    .slogan {
+      text-align: center;
+      color: #ffffff;
+      margin-top: 10px;
+    }
+
+    .slogan h2 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .slogan p {
+      font-size: 16px;
+      font-weight: 600;
+      font-style: italic;
+      opacity: 0.95;
+    }
+
+    /* Buttons Section */
+    .buttons-section {
+      position: relative;
+      background: linear-gradient(180deg, #5b8db8 0%, #4a9bb8 40%, #3ba8c4 100%);
+      padding: 30px 24px 40px;
+    }
+
+    .wave-mid {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .wave-mid svg {
+      width: 100%;
+      height: 50px;
+      display: block;
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: block;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 30px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    .btn-informate {
+      background: #2196a8;
+      align-self: flex-start;
+    }
+
+    .btn-respetate {
+      background: #7b6baa;
+      align-self: center;
+    }
+
+    .btn-cuidate {
+      background: #e8943a;
+      align-self: flex-end;
+    }
+
+    /* Staggered layout */
+    .buttons-container .btn:nth-child(1) { margin-left: 0; }
+    .buttons-container .btn:nth-child(2) { margin-left: 40px; }
+    .buttons-container .btn:nth-child(3) { margin-left: 80px; }
+
+    /* QR Section */
+    .qr-section {
+      background: #ffffff;
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    .qr-section h3 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: #4a4a8a;
+      margin-bottom: 6px;
+    }
+
+    .qr-section p {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 16px;
+    }
+
+    .qr-code {
+      display: inline-block;
+      padding: 12px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    .qr-code canvas {
+      display: block;
+    }
+
+    /* Footer */
+    .footer {
+      background: #4a4a8a;
+      color: #ffffff;
+      text-align: center;
+      padding: 16px 24px;
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .page-wrapper {
+        max-width: 100%;
+      }
+      .header h1 { font-size: 24px; }
+      .header h1 span { font-size: 28px; }
+      .slogan h2 { font-size: 22px; }
+      .buttons-container .btn:nth-child(2) { margin-left: 20px; }
+      .buttons-container .btn:nth-child(3) { margin-left: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>SEXUALIDAD<span>POSITIVA</span></h1>
+      <div class="header-line"></div>
+    </header>
+
+    <!-- Illustration -->
+    <section class="illustration-section">
+      <div class="illustration-container">
+        <div class="icons-row">
+          <span class="icon-item">&#x1F4F1;</span>
+          <span class="icon-item">&#x1F48A;</span>
+          <span class="icon-item">&#x2764;&#xFE0F;</span>
+          <span class="icon-item">&#x1F9EA;</span>
+          <span class="icon-item">&#x2695;&#xFE0F;</span>
+          <span class="icon-item">&#x1F9E0;</span>
+          <span class="icon-item">&#x2705;</span>
+          <span class="icon-item">&#x1F4D6;</span>
+        </div>
+        <div class="illustration-people">
+          <svg width="280" height="200" viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Person 1 (left - darker skin) -->
+            <circle cx="105" cy="60" r="30" fill="#8B6914"/>
+            <path d="M75 95 C75 85, 135 85, 135 95 L140 180 L70 180 Z" fill="#3b8ea5"/>
+            <!-- Hair person 1 -->
+            <path d="M78 55 C78 35, 132 35, 132 55 C132 45, 78 45, 78 55Z" fill="#3d2b1f"/>
+            <!-- Person 2 (right - lighter skin, long hair) -->
+            <circle cx="175" cy="55" r="30" fill="#FDBCB4"/>
+            <!-- Long hair -->
+            <path d="M148 45 C148 25, 202 25, 202 45 L205 100 C205 100, 195 80, 175 80 C155 80, 145 100, 145 100 Z" fill="#D4860B"/>
+            <path d="M145 90 C145 80, 205 80, 205 90 L210 180 L140 180 Z" fill="#e8943a"/>
+            <!-- Heart between them -->
+            <path d="M140 120 C140 110, 125 100, 125 115 C125 130, 140 140, 140 140 C140 140, 155 130, 155 115 C155 100, 140 110, 140 120Z" fill="#e74c6f"/>
+            <!-- Green heart bottom left -->
+            <path d="M80 155 C80 148, 70 142, 70 150 C70 158, 80 164, 80 164 C80 164, 90 158, 90 150 C90 142, 80 148, 80 155Z" fill="#4CAF50"/>
+            <!-- Heartbeat icon -->
+            <path d="M188 140 L195 140 L198 130 L202 150 L206 135 L210 140 L218 140" stroke="#e74c6f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave + Slogan -->
+    <section class="wave-section">
+      <div class="wave-top">
+        <svg viewBox="0 0 500 60" preserveAspectRatio="none">
+          <path d="M0,30 C80,60 160,0 250,25 C340,50 420,10 500,30 L500,0 L0,0 Z" fill="#d4e4f4"/>
+        </svg>
+      </div>
+      <div class="slogan">
+        <h2>Informate,<br>Respetate y Cuidate.</h2>
+        <p>Tu salud es parte de tu bienestar.</p>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="buttons-section">
+      <div class="wave-mid">
+        <svg viewBox="0 0 500 50" preserveAspectRatio="none">
+          <path d="M0,25 C100,50 200,0 300,20 C400,40 450,10 500,25 L500,0 L0,0 Z" fill="#6a5b9a"/>
+        </svg>
+      </div>
+      <div class="buttons-container">
+        <a href="#informate" class="btn btn-informate">INFORMATE</a>
+        <a href="#respetate" class="btn btn-respetate">RESPETATE</a>
+        <a href="#cuidate" class="btn btn-cuidate">CUIDATE</a>
+      </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <section class="qr-section">
+      <h3>Comparte este recurso</h3>
+      <p>Escanea el codigo QR para acceder desde tu celular</p>
+      <div class="qr-code">
+        <canvas id="qrcode"></canvas>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Sexualidad Positiva &mdash; Proyecto Escolar 2026
+    </footer>
+
+  </div>
+
+  <!-- QR Code Generator -->
+  <script>
+    // Minimal QR Code generator
+    // Will update URL once deployed to Vercel
+    function generateQR() {
+      const canvas = document.getElementById('qrcode');
+      const ctx = canvas.getContext('2d');
+      const url = window.location.href;
+
+      // Use a simple API to generate QR via image
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = function() {
+        canvas.width = 180;
+        canvas.height = 180;
+        ctx.drawImage(img, 0, 0, 180, 180);
+      };
+      img.onerror = function() {
+        // Fallback: draw a placeholder
+        canvas.width = 180;
+        canvas.height = 180;
+        ctx.fillStyle = '#4a4a8a';
+        ctx.fillRect(0, 0, 180, 180);
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '14px Open Sans';
+        ctx.textAlign = 'center';
+        ctx.fillText('QR Code', 90, 85);
+        ctx.fillText('(se genera al', 90, 105);
+        ctx.fillText('desplegar)', 90, 125);
+      };
+      // Using QR code API
+      img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=' + encodeURIComponent(url);
+    }
+
+    generateQR();
+  </script>
+</body>
+</html>
